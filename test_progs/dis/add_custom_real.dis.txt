@@ -1,0 +1,650 @@
+; msdisasm: /tmp/demo_add_build/add_custom_merge_obj_dir/device_aiv.o  (.text 2596B, 649 words)
+  000000  a07f3a07  cfg07 tag=0x3a imm16=32672
+  000004  10007b07  cfg07 tag=0x7b imm16=16
+  000008  80389e02  poll_setup/addr 80389e
+  00000c  81d73b00  scalar00 op=3b 81d7
+  000010  80081f02  poll_setup/addr 80081f
+  000014  ff7f2007  cfg07 tag=0x20 imm16=32767
+  000018  01000007  cfg07 tag=0x00 imm16=1
+  00001c  0af8de00  scalar00 op=de 0af8
+  000020  00802207  cfg07 tag=0x22 imm16=32768
+  000024  80000002  poll_setup/addr 800000
+  000028  84f83a00  scalar00 op=3a 84f8
+  00002c  00004080  vaddr_mode2 0000
+  000030  80004080  vaddr_mode2 8000
+  000034  38d13d08  addr_setup 38d13d
+  000038  80480002  poll_setup/addr 804800
+  00003c  00000207  cfg07 tag=0x02 imm16=0
+  000040  1002c609  ld_arg_gm reg=0 sub=2 flag- slot=0xc6
+  000044  0000c403  addr_setup 0000c4
+  000048  80380002  poll_setup/addr 803800
+  00004c  c21c0002  poll_setup/addr c21c00
+  000050  00090602  poll_setup/addr 000906
+  000054  80380002  poll_setup/addr 803800
+  000058  f0ff0210  stack_adj -16 (帧栈调整, DWARF 归因)
+  00005c  008b4102  poll_setup/addr 008b41
+  000060  00090602  poll_setup/addr 000906
+  000064  28ed8304  addr_setup 28ed83
+  000068  20e78308  addr_setup 20e783
+  00006c  00000007  cfg_init tag=0x00 (配置槽初始化/清除)
+  000070  10e78b08  addr_setup 10e78b
+  000074  80e5350f  frame_setup 80e535
+  000078  0110c009  ld_arg_gm reg=1 sub=0 flag- slot=0xc0
+  00007c  0150c009  ld_arg_gm reg=5 sub=0 flag- slot=0xc0
+  000080  80e78308  addr_setup 80e783
+  000084  60e78b08  addr_setup 60e78b
+  000088  00efe10f  frame_setup 00efe1
+  00008c  0110c009  ld_arg_gm reg=1 sub=0 flag- slot=0xc0
+  000090  6150c009  ld_arg_gm reg=5 sub=0 flag- slot=0xc0
+  000094  0150c009  ld_arg_gm reg=5 sub=0 flag- slot=0xc0
+  000098  50e78308  addr_setup 50e783
+  00009c  30e78b08  addr_setup 30e78b
+  0000a0  0110c009  ld_arg_gm reg=1 sub=0 flag- slot=0xc0
+  0000a4  90e78308  addr_setup 90e783
+  0000a8  6150c009  ld_arg_gm reg=5 sub=0 flag- slot=0xc0
+  0000ac  0150c009  ld_arg_gm reg=5 sub=0 flag- slot=0xc0
+  0000b0  8f024202  poll_setup/addr 8f0242
+  0000b4  0f02c202  frame_regsave slot=1 (帧寄存器存取)
+  0000b8  00100208  addr_setup 001002
+  0000bc  88e78b08  addr_setup 88e78b
+  0000c0  02e0b50f  frame_setup 02e0b5
+  0000c4  02e1b50f  frame_setup 02e1b5
+  0000c8  82e0b50f  frame_setup 82e0b5
+  0000cc  0010ca04  addr_setup 0010ca
+  0000d0  a0e5350f  frame_setup a0e535
+  0000d4  00e6350f  frame_setup 00e635
+  0000d8  00ea350f  frame_setup 00ea35
+  0000dc  00ee350f  frame_setup 00ee35
+  0000e0  01eeb70f  frame_setup 01eeb7
+  0000e4  01ebb90f  frame_setup 01ebb9
+  0000e8  01e8bb0f  frame_setup 01e8bb
+  0000ec  80180a02  poll_setup/addr 80180a
+  0000f0  80f88d02  poll_setup/addr 80f88d
+  0000f4  80598a02  poll_setup/addr 80598a
+  0000f8  8008ce02  frame_regsave slot=7 (帧寄存器存取)
+  0000fc  04530e00  scalar00 op=0e 0453
+  000100  00051407  cfg07 tag=0x14 imm16=1280
+  000104  68e28d08  addr_setup 68e28d
+  000108  0c02ce02  frame_regsave slot=7 (帧寄存器存取)
+  00010c  81230400  scalar00 op=04 8123
+  000110  00080e07  cfg07 tag=0x0e imm16=2048
+  000114  90edc504  addr_setup 90edc5
+  000118  8163c409  ld_arg_gm reg=6 sub=3 flagf slot=0xc4
+  00011c  80f88502  poll_setup/addr 80f885
+  000120  8008cc02  frame_regsave slot=6 (帧寄存器存取)
+  000124  84220c00  scalar00 op=0c 8422
+  000128  ffff5507  cfg07 tag=0x55 imm16=65535
+  00012c  00011a07  cfg07 tag=0x1a imm16=256
+  000130  ffff9b07  cfg07 tag=0x9b imm16=65535
+  000134  0c02cc02  frame_regsave slot=6 (帧寄存器存取)
+  000138  01330600  scalar00 op=06 0133
+  00013c  f8edc704  addr_setup f8edc7
+  000140  00e28d08  addr_setup 00e28d
+  000144  ffffdb07  cfg07 tag=0xdb imm16=65535
+  000148  8163c609  ld_arg_gm reg=6 sub=3 flagf slot=0xc6
+  00014c  80f88702  poll_setup/addr 80f887
+  000150  8008cc02  frame_regsave slot=6 (帧寄存器存取)
+  000154  84320c00  scalar00 op=0c 8432
+  000158  0c02cc02  frame_regsave slot=6 (帧寄存器存取)
+  00015c  01430800  scalar00 op=08 0143
+  000160  60eec904  addr_setup 60eec9
+  000164  98e18d08  addr_setup 98e18d
+  000168  01000407  imm16_setup val=1 (向量 count / 标量位型 / 拷贝参数,视消费者)
+  00016c  8163c809  ld_arg_gm reg=6 sub=3 flagf slot=0xc8
+  000170  2ced0903  addr_setup 2ced09
+  000174  e4e89703  addr_setup e4e897
+  000178  00481002  poll_setup/addr 004810
+  00017c  00e78f08  addr_setup 00e78f
+  000180  0402d002  frame_regsave slot=8 (帧寄存器存取)
+  000184  01741000  scalar00 op=10 0174
+  000188  00881802  poll_setup/addr 008818
+  00018c  02000c07  cfg07 tag=0x0c imm16=2
+  000190  012b1802  poll_setup/addr 012b18
+  000194  30edcd04  addr_setup 30edcd
+  000198  48edd104  addr_setup 48edd1
+  00019c  00809404  addr_setup 008094
+  0001a0  00c09604  addr_setup 00c096
+  0001a4  00b11808  addr_setup 00b118
+  0001a8  0880da04  addr_setup 0880da
+  0001ac  21869409  ld_arg_gm reg=8 sub=6 flag- slot=0x94
+  0001b0  02401808  addr_setup 024018
+  0001b4  00ca1802  poll_setup/addr 00ca18
+  0001b8  0402d802  frame_regsave slot=12 (帧寄存器存取)
+  0001bc  01761800  scalar00 op=18 0176
+  0001c0  00c81c02  poll_setup/addr 00c81c
+  0001c4  1880da04  addr_setup 1880da
+  0001c8  00b21008  addr_setup 00b210
+  0001cc  012b1c02  poll_setup/addr 012b1c
+  0001d0  50edcd04  addr_setup 50edcd
+  0001d4  68edd904  addr_setup 68edd9
+  0001d8  00c09404  addr_setup 00c094
+  0001dc  00e09004  addr_setup 00e090
+  0001e0  00b31008  addr_setup 00b310
+  0001e4  08c0da04  addr_setup 08c0da
+  0001e8  21c49409  ld_arg_gm reg=12 sub=4 flag- slot=0x94
+  0001ec  04401408  addr_setup 044014
+  0001f0  00aa1402  poll_setup/addr 00aa14
+  0001f4  0402d402  frame_regsave slot=10 (帧寄存器存取)
+  0001f8  01750e00  scalar00 op=0e 0175
+  0001fc  18c0da04  addr_setup 18c0da
+  000200  70edcd04  addr_setup 70edcd
+  000204  00060c07  cfg07 tag=0x0c imm16=1536
+  000208  00781402  poll_setup/addr 007814
+  00020c  00b41008  addr_setup 00b410
+  000210  ffff4d07  cfg07 tag=0x4d imm16=65535
+  000214  012b1402  poll_setup/addr 012b14
+  000218  88edcf04  addr_setup 88edcf
+  00021c  00708c04  addr_setup 00708c
+  000220  00a09004  addr_setup 00a090
+  000224  00b51008  addr_setup 00b510
+  000228  0870da04  addr_setup 0870da
+  00022c  21748c09  ld_arg_gm reg=7 sub=4 flag- slot=0x8c
+  000230  01011007  cfg07 tag=0x10 imm16=257
+  000234  01085107  cfg07 tag=0x51 imm16=2049
+  000238  d0e28b08  addr_setup d0e28b
+  00023c  90e29308  addr_setup 90e293
+  000240  06401808  addr_setup 064018
+  000244  10000807  setup imm=16 (count 或地址,地址单位为 256B → 4096B)
+  000248  08089107  cfg07 tag=0x91 imm16=2056
+  00024c  80200402  poll_setup/addr 802004
+  000250  b0e28708  addr_setup b0e287
+  000254  1870da04  addr_setup 1870da
+  000258  00b61608  addr_setup 00b616
+  00025c  08004907  cfg07 tag=0x49 imm16=8
+  000260  08500a08  addr_setup 08500a
+  000264  01000c07  cfg07 tag=0x0c imm16=1
+  000268  80000e07  cfg07 tag=0x0e imm16=128
+  00026c  0001d107  cfg07 tag=0xd1 imm16=256
+  000270  08901208  addr_setup 089012
+  000274  00001407  cfg_init tag=0x14 (配置槽初始化/清除)
+  000278  88004080  vaddr_mode2 8800
+  00027c  e4e89704  addr_setup e4e897
+  000280  2ced1904  addr_setup 2ced19
+  000284  08004080  vaddr_mode2 0800
+  000288  1b000040  branch.f +27 words
+  00028c  0010da03  addr_setup 0010da
+  000290  01e01c08  addr_setup 01e01c
+  000294  00ea5e02  poll_setup/addr 00ea5e
+  000298  3ef34000  s_cmp/sel (regs=3e/f3)
+  00029c  0907dc00  scalar00 op=dc 0907
+  0002a0  0102d802  frame_regsave slot=12 (帧寄存器存取)
+  0002a4  72ed5d04  addr_setup 72ed5d
+  0002a8  60eedd03  addr_setup 60eedd
+  0002ac  04b09e03  addr_setup 04b09e
+  0002b0  01a01408  addr_setup 01a014
+  0002b4  01e61800  scalar00 op=18 01e6
+  0002b8  10f29870  dcopy UB->GM (regsel=10f298)
+  0002bc  10d0d803  addr_setup 10d0d8
+  0002c0  10a0400a  poll_event evt=16 bank=g40
+  0002c4  80c3dc02  frame_regsave slot=14 (帧寄存器存取)
+  0002c8  40e4d802  frame_regsave slot=12 (帧寄存器存取)
+  0002cc  10d0d804  addr_setup 10d0d8
+  0002d0  03b01c04  addr_setup 03b01c
+  0002d4  00b0000f  frame_setup 00b000
+  0002d8  76ed1703  addr_setup 76ed17
+  0002dc  80e91802  poll_setup/addr 80e918
+  0002e0  01b09608  addr_setup 01b096
+  0002e4  76ed1704  addr_setup 76ed17
+  0002e8  b014a240  set_flag MTE3->V (reg48)
+  0002ec  02002040  branch.t +2 words
+  0002f0  13010040  branch.f +275 words
+  0002f4  48edd703  addr_setup 48edd7
+  0002f8  30ed1b03  addr_setup 30ed1b
+  0002fc  37ed1d03  addr_setup 37ed1d
+  000300  00ea1802  poll_setup/addr 00ea18
+  000304  01e01c08  addr_setup 01e01c
+  000308  00ea1e02  poll_setup/addr 00ea1e
+  00030c  8ef60000  scalar00 op=00 8ef6
+  000310  0907dc00  scalar00 op=dc 0907
+  000314  0402d802  frame_regsave slot=12 (帧寄存器存取)
+  000318  37ed1d04  addr_setup 37ed1d
+  00031c  00b61e01  scalar64 imm_part 00b6 sub=1e
+  000320  00ffe448  frame_enter 00ffe4 (DWARF 归因: 序言)
+  000324  01b61a00  scalar00 op=1a 01b6
+  000328  01b6000e  scalar64_aux 01b600 (64 位地址/立即数辅助)
+  00032c  03d01c03  addr_setup 03d01c
+  000330  ffe0000a  poll_event evt=255 bank=A
+  000334  0a002040  branch.t +10 words
+  000338  80e91c02  poll_setup/addr 80e91c
+  00033c  0010de03  addr_setup 0010de
+  000340  3806c240  wait_flag V->S (reg56)
+  000344  03d01c03  addr_setup 03d01c
+  000348  08f0e003  addr_setup 08f0e0
+  00034c  80e91c02  poll_setup/addr 80e91c
+  000350  00e4e002  frame_regsave slot=16 (帧寄存器存取)
+  000354  08f0e004  addr_setup 08f0e0
+  000358  62d0000f  frame_setup 62d000
+  00035c  36ed1d03  addr_setup 36ed1d
+  000360  01b61e00  scalar00 op=1e 01b6
+  000364  68ede103  addr_setup 68ede1
+  000368  01e01c08  addr_setup 01e01c
+  00036c  57ed2503  addr_setup 57ed25
+  000370  36ed1d04  addr_setup 36ed1d
+  000374  04f09e03  addr_setup 04f09e
+  000378  50ed1d03  addr_setup 50ed1d
+  00037c  002a2302  poll_setup/addr 002a23
+  000380  01202508  addr_setup 012025
+  000384  002a2702  poll_setup/addr 002a27
+  000388  0e370100  scalar00 op=01 0e37
+  00038c  0909e400  scalar00 op=e4 0909
+  000390  0402e202  frame_regsave slot=17 (帧寄存器存取)
+  000394  57ed2504  addr_setup 57ed25
+  000398  80082701  scalar64 imm_part 8008 sub=27
+  00039c  00ff2449  jumpcmp.b 00ff24 (JUMPCMP 姊妹形态)
+  0003a0  81081d00  scalar00 op=1d 8108
+  0003a4  8108010e  scalar64_aux 810801 (64 位地址/立即数辅助)
+  0003a8  03e02403  addr_setup 03e024
+  0003ac  ff20410a  poll_event evt=255 bank=g41
+  0003b0  02002040  branch.t +2 words
+  0003b4  0b000040  branch.f +11 words
+  0003b8  80292702  poll_setup/addr 802927
+  0003bc  0010e403  addr_setup 0010e4
+  0003c0  4c06c240  wait_flag V->S (reg76)
+  0003c4  03e02603  addr_setup 03e026
+  0003c8  0820e903  addr_setup 0820e9
+  0003cc  80392702  poll_setup/addr 803927
+  0003d0  0034e902  poll_setup/addr 0034e9
+  0003d4  0820e904  addr_setup 0820e9
+  0003d8  62e0000f  frame_setup 62e000
+  0003dc  02000040  branch.f +2 words
+  0003e0  0010e403  addr_setup 0010e4
+  0003e4  56ed2703  addr_setup 56ed27
+  0003e8  00a82802  poll_setup/addr 00a828
+  0003ec  81082100  scalar00 op=21 8108
+  0003f0  01302708  addr_setup 013027
+  0003f4  0802e802  frame_regsave slot=20 (帧寄存器存取)
+  0003f8  56ed2704  addr_setup 56ed27
+  0003fc  90ede703  addr_setup 90ede7
+  000400  0400a303  addr_setup 0400a3
+  000404  01b61600  scalar00 op=16 01b6
+  000408  013a2700  scalar00 op=27 013a
+  00040c  08321f71  dcopy GM->UB (MTE2, regsel=08321f)
+  000410  f8eddf03  addr_setup f8eddf
+  000414  01fa1e00  scalar00 op=1e 01fa
+  000418  08f22271  dcopy GM->UB (MTE2, regsel=08f222)
+  00041c  34ed5f03  addr_setup 34ed5f
+  000420  a057da01  scalar64 imm_part a057 sub=da
+  000424  31ed1b03  addr_setup 31ed1b
+  000428  01d01a08  addr_setup 01d01a
+  00042c  31ed1b04  addr_setup 31ed1b
+  000430  0020db03  addr_setup 0020db
+  000434  80d3de02  frame_regsave slot=15 (帧寄存器存取)
+  000438  40f4da02  frame_regsave slot=13 (帧寄存器存取)
+  00043c  0020db04  addr_setup 0020db
+  000440  02b01e04  addr_setup 02b01e
+  000444  34ed5703  addr_setup 34ed57
+  000448  54ed5b03  addr_setup 54ed5b
+  00044c  80f91e02  poll_setup/addr 80f91e
+  000450  01b01608  addr_setup 01b016
+  000454  00ba5802  poll_setup/addr 00ba58
+  000458  3ec34000  s_cmp/sel (regs=3e/c3)
+  00045c  0302da02  frame_regsave slot=13 (帧寄存器存取)
+  000460  8905d600  scalar00 op=d6 8905
+  000464  81361800  scalar00 op=18 8136
+  000468  34ed5704  addr_setup 34ed57
+  00046c  08c0dc04  addr_setup 08c0dc
+  000470  51ed1703  addr_setup 51ed17
+  000474  0010d803  addr_setup 0010d8
+  000478  01b01608  addr_setup 01b016
+  00047c  51ed1704  addr_setup 51ed17
+  000480  00c0d603  addr_setup 00c0d6
+  000484  80b3dc02  frame_regsave slot=14 (帧寄存器存取)
+  000488  40e4d602  frame_regsave slot=11 (帧寄存器存取)
+  00048c  00c0d604  addr_setup 00c0d6
+  000490  02001d04  addr_setup 02001d
+  000494  54ed5703  addr_setup 54ed57
+  000498  32ed5b03  addr_setup 32ed5b
+  00049c  80e91c02  poll_setup/addr 80e91c
+  0004a0  01b01608  addr_setup 01b016
+  0004a4  00ba5802  poll_setup/addr 00ba58
+  0004a8  3ec34000  s_cmp/sel (regs=3e/c3)
+  0004ac  8905d600  scalar00 op=d6 8905
+  0004b0  31ed1903  addr_setup 31ed19
+  0004b4  54ed5704  addr_setup 54ed57
+  0004b8  8056d601  scalar64 imm_part 8056 sub=d6
+  0004bc  01c09808  addr_setup 01c098
+  0004c0  31ed1904  addr_setup 31ed19
+  0004c4  02b01803  addr_setup 02b018
+  0004c8  bc10a240  set_flag MTE2->V (reg60)
+  0004cc  ffc0000a  poll_event evt=255 bank=A
+  0004d0  b810a240  set_flag MTE2->V (reg56)
+  0004d4  0b002040  branch.t +11 words
+  0004d8  0010da03  addr_setup 0010da
+  0004dc  02b01c03  addr_setup 02b01c
+  0004e0  80c91802  poll_setup/addr 80c918
+  0004e4  00d0de03  addr_setup 00d0de
+  0004e8  80e91c02  poll_setup/addr 80e91c
+  0004ec  00e4de02  frame_regsave slot=15 (帧寄存器存取)
+  0004f0  00d0de04  addr_setup 00d0de
+  0004f4  42b0000f  frame_setup 42b000
+  0004f8  32ed5b03  addr_setup 32ed5b
+  0004fc  b010c240  wait_flag MTE2->V (reg48)
+  000500  52ed5903  addr_setup 52ed59
+  000504  01d01a08  addr_setup 01d01a
+  000508  00da5c02  poll_setup/addr 00da5c
+  00050c  3ee34000  s_cmp/sel (regs=3e/e3)
+  000510  00c81c02  poll_setup/addr 00c81c
+  000514  8906da00  scalar00 op=da 8906
+  000518  0302dc02  frame_regsave slot=14 (帧寄存器存取)
+  00051c  01371c00  scalar00 op=1c 0137
+  000520  51ed1f03  addr_setup 51ed1f
+  000524  32ed5b04  addr_setup 32ed5b
+  000528  08e0da03  addr_setup 08e0da
+  00052c  01f09e08  addr_setup 01f09e
+  000530  04b09c03  addr_setup 04b09c
+  000534  51ed1f04  addr_setup 51ed1f
+  000538  02d01e03  addr_setup 02d01e
+  00053c  fff0000a  poll_event evt=255 bank=A
+  000540  0b002040  branch.t +11 words
+  000544  0010d803  addr_setup 0010d8
+  000548  02d02003  addr_setup 02d020
+  00054c  80f91e02  poll_setup/addr 80f91e
+  000550  00c0e203  addr_setup 00c0e2
+  000554  80092102  poll_setup/addr 800921
+  000558  0004e302  poll_setup/addr 0004e3
+  00055c  00c0e204  addr_setup 00c0e2
+  000560  42d0000f  frame_setup 42d000
+  000564  52ed5903  addr_setup 52ed59
+  000568  bc10c240  wait_flag MTE2->V (reg60)
+  00056c  01c01808  addr_setup 01c018
+  000570  00ca5e02  poll_setup/addr 00ca5e
+  000574  3ef34000  s_cmp/sel (regs=3e/f3)
+  000578  0906d800  scalar00 op=d8 0906
+  00057c  88ede103  addr_setup 88ede1
+  000580  52ed5904  addr_setup 52ed59
+  000584  04d09e03  addr_setup 04d09e
+  000588  70ed2503  addr_setup 70ed25
+  00058c  77ed2703  addr_setup 77ed27
+  000590  00a81802  poll_setup/addr 00a818
+  000594  0702d802  frame_regsave slot=12 (帧寄存器存取)
+  000598  003a2302  poll_setup/addr 003a23
+  00059c  01302708  addr_setup 013027
+  0005a0  003a2902  poll_setup/addr 003a29
+  0005a4  0e490100  scalar00 op=01 0e49
+  0005a8  8909e600  scalar00 op=e6 8909
+  0005ac  0402e202  frame_regsave slot=17 (帧寄存器存取)
+  0005b0  77ed2704  addr_setup 77ed27
+  0005b4  80082901  scalar64 imm_part 8008 sub=29
+  0005b8  007f4449  jumpcmp.b 007f44 (JUMPCMP 姊妹形态)
+  0005bc  81082500  scalar00 op=25 8108
+  0005c0  8108010e  scalar64_aux 810801 (64 位地址/立即数辅助)
+  0005c4  03202703  addr_setup 032027
+  0005c8  ff30410a  poll_event evt=255 bank=g41
+  0005cc  02002040  branch.t +2 words
+  0005d0  0b000040  branch.f +11 words
+  0005d4  80392902  poll_setup/addr 803929
+  0005d8  0010e603  addr_setup 0010e6
+  0005dc  d014c240  wait_flag MTE3->V (reg80)
+  0005e0  03202903  addr_setup 032029
+  0005e4  1030eb03  addr_setup 1030eb
+  0005e8  80492902  poll_setup/addr 804929
+  0005ec  0044eb02  poll_setup/addr 0044eb
+  0005f0  1030eb04  addr_setup 1030eb
+  0005f4  6220010f  frame_setup 622001
+  0005f8  02000040  branch.f +2 words
+  0005fc  0010e603  addr_setup 0010e6
+  000600  76ed2903  addr_setup 76ed29
+  000604  81082100  scalar00 op=21 8108
+  000608  80004080  vaddr_mode2 8000
+  00060c  01402908  addr_setup 014029
+  000610  76ed2904  addr_setup 76ed29
+  000614  0400a303  addr_setup 0400a3
+  000618  0004e040  vaddr_mode 0004
+  00061c  80382802  poll_setup/addr 803828
+  000620  018b6902  poll_setup/addr 018b69
+  000624  00490702  poll_setup/addr 004907
+  000628  1c004080  vaddr_mode2 1c00
+  00062c  a0e76285  vadd.f16
+  000630  80381c02  poll_setup/addr 80381c
+  000634  008b5d02  poll_setup/addr 008b5d
+  000638  00e90602  poll_setup/addr 00e906
+  00063c  74ed5d03  addr_setup 74ed5d
+  000640  2097e401  scalar64 imm_part 2097 sub=e4
+  000644  71ed1d03  addr_setup 71ed1d
+  000648  88004080  vaddr_mode2 8800
+  00064c  01e01c08  addr_setup 01e01c
+  000650  71ed1d04  addr_setup 71ed1d
+  000654  1830dd03  addr_setup 1830dd
+  000658  80e3de02  frame_regsave slot=15 (帧寄存器存取)
+  00065c  40f4dc02  frame_regsave slot=14 (帧寄存器存取)
+  000660  08004080  vaddr_mode2 0800
+  000664  1830dd04  addr_setup 1830dd
+  000668  02001f04  addr_setup 02001f
+  00066c  74ed5d03  addr_setup 74ed5d
+  000670  80f91e02  poll_setup/addr 80f91e
+  000674  01e01c08  addr_setup 01e01c
+  000678  00ea6002  poll_setup/addr 00ea60
+  00067c  3e034100  scalar00 op=41 3e03
+  000680  0010e003  addr_setup 0010e0
+  000684  0907dc00  scalar00 op=dc 0907
+  000688  74ed5d04  addr_setup 74ed5d
+  00068c  0800dd03  addr_setup 0800dd
+  000690  80e3e202  frame_regsave slot=17 (帧寄存器存取)
+  000694  4014dd02  poll_setup/addr 4014dd
+  000698  0800dd04  addr_setup 0800dd
+  00069c  03b02204  addr_setup 03b022
+  0006a0  00b0000f  frame_setup 00b000
+  0006a4  36ed1703  addr_setup 36ed17
+  0006a8  0010dc03  addr_setup 0010dc
+  0006ac  80192302  poll_setup/addr 801923
+  0006b0  01b09608  addr_setup 01b096
+  0006b4  36ed1704  addr_setup 36ed17
+  0006b8  08e0d603  addr_setup 08e0d6
+  0006bc  80b3e002  frame_regsave slot=16 (帧寄存器存取)
+  0006c0  4004d702  poll_setup/addr 4004d7
+  0006c4  08e0d604  addr_setup 08e0d6
+  0006c8  03d02004  addr_setup 03d020
+  0006cc  00d0000f  frame_setup 00d000
+  0006d0  56ed1703  addr_setup 56ed17
+  0006d4  72ed5d03  addr_setup 72ed5d
+  0006d8  71ed1b03  addr_setup 71ed1b
+  0006dc  01b09608  addr_setup 01b096
+  0006e0  bc06a240  set_flag V->V (reg60)
+  0006e4  56ed1704  addr_setup 56ed17
+  0006e8  0097d601  scalar64 imm_part 0097 sub=d6
+  0006ec  01d09a08  addr_setup 01d09a
+  0006f0  71ed1b04  addr_setup 71ed1b
+  0006f4  02b01e03  addr_setup 02b01e
+  0006f8  80091b02  poll_setup/addr 80091b
+  0006fc  4406a240  set_flag V->S (reg68)
+  000700  fff0400a  poll_event evt=255 bank=g40
+  000704  3406a240  set_flag V->S (reg52)
+  000708  02002040  branch.t +2 words
+  00070c  e0fe0040  branch.f -288 words
+  000710  0010da03  addr_setup 0010da
+  000714  02b01c03  addr_setup 02b01c
+  000718  80f91e02  poll_setup/addr 80f91e
+  00071c  18d0e003  addr_setup 18d0e0
+  000720  80e91c02  poll_setup/addr 80e91c
+  000724  00e4e002  frame_regsave slot=16 (帧寄存器存取)
+  000728  18d0e004  addr_setup 18d0e0
+  00072c  42b0000f  frame_setup 42b000
+  000730  72ed5d03  addr_setup 72ed5d
+  000734  bc06c240  wait_flag V->V (reg60)
+  000738  d6fe0040  branch.f -298 words
+  00073c  2ded0103  addr_setup 2ded01
+  000740  e0120448  frame_enter e01204 (DWARF 归因: 序言)
+  000744  2ced0703  addr_setup 2ced07
+  000748  a1e5350f  frame_setup a1e535
+  00074c  60922048  frame_enter 609220 (DWARF 归因: 序言)
+  000750  00000007  cfg_init tag=0x00 (配置槽初始化/清除)
+  000754  fde68308  addr_setup fde683
+  000758  0b000040  branch.f +11 words
+  00075c  80290402  poll_setup/addr 802904
+  000760  0804c240  wait_flag V->S (reg8)
+  000764  0210000f  frame_setup 021000
+  000768  2ced0703  addr_setup 2ced07
+  00076c  01000008  addr_setup 010000
+  000770  000a0402  poll_setup/addr 000a04
+  000774  003a0802  poll_setup/addr 003a08
+  000778  10100208  addr_setup 101002
+  00077c  4400294a  jumpcmp.lt-side (regs=44/00 mode=29, 目标寄存器间接)
+  000780  86000040  branch.f +134 words
+  000784  00100403  addr_setup 001004
+  000788  ff20000a  poll_event evt=255 bank=A
+  00078c  f8ff2040  branch.t -8 words
+  000790  fd1f0803  addr_setup fd1f08
+  000794  c07e4448  frame_enter c07e44 (DWARF 归因: 序言)
+  000798  fe1f0603  addr_setup fe1f06
+  00079c  1730c00a  poll_event evt=23 bank=B
+  0007a0  10002040  branch.t +16 words
+  0007a4  1130c00a  poll_event evt=17 bank=B
+  0007a8  02002040  branch.t +2 words
+  0007ac  1c000040  branch.f +28 words
+  0007b0  1430c00a  poll_event evt=20 bank=B
+  0007b4  31002040  branch.t +49 words
+  0007b8  1230000a  poll_event evt=18 bank=A
+  0007bc  50002040  branch.t +80 words
+  0007c0  1330000a  poll_event evt=19 bank=A
+  0007c4  51002040  branch.t +81 words
+  0007c8  1430000a  poll_event evt=20 bank=A
+  0007cc  02002040  branch.t +2 words
+  0007d0  e5ff0040  branch.f -27 words
+  0007d4  80290402  poll_setup/addr 802904
+  0007d8  8812c240  wait_flag MTE2->V (reg8)
+  0007dc  e2ff0040  branch.f -30 words
+  0007e0  1c30c00a  poll_event evt=28 bank=B
+  0007e4  02002040  branch.t +2 words
+  0007e8  17000040  branch.f +23 words
+  0007ec  1f30c00a  poll_event evt=31 bank=B
+  0007f0  2c002040  branch.t +44 words
+  0007f4  1d30000a  poll_event evt=29 bank=A
+  0007f8  47002040  branch.t +71 words
+  0007fc  1e30000a  poll_event evt=30 bank=A
+  000800  48002040  branch.t +72 words
+  000804  1f30000a  poll_event evt=31 bank=A
+  000808  02002040  branch.t +2 words
+  00080c  d6ff0040  branch.f -42 words
+  000810  80290402  poll_setup/addr 802904
+  000814  882ac240  wait_flag M->V (reg8)
+  000818  d3ff0040  branch.f -45 words
+  00081c  45802c48  frame_enter 45802c (DWARF 归因: 序言)
+  000820  29000040  branch.f +41 words
+  000824  46882048  frame_enter 468820 (DWARF 归因: 序言)
+  000828  87882048  frame_enter 878820 (DWARF 归因: 序言)
+  00082c  1130000a  poll_event evt=17 bank=A
+  000830  02002040  branch.t +2 words
+  000834  ccff0040  branch.f -52 words
+  000838  80290402  poll_setup/addr 802904
+  00083c  0849c240  wait_flag M->M (reg8)
+  000840  c9ff0040  branch.f -55 words
+  000844  1930c00a  poll_event evt=25 bank=B
+  000848  02002040  branch.t +2 words
+  00084c  24000040  branch.f +36 words
+  000850  1a30000a  poll_event evt=26 bank=A
+  000854  3c002040  branch.t +60 words
+  000858  1b30000a  poll_event evt=27 bank=A
+  00085c  3d002040  branch.t +61 words
+  000860  1c30000a  poll_event evt=28 bank=A
+  000864  02002040  branch.t +2 words
+  000868  bfff0040  branch.f -65 words
+  00086c  80290402  poll_setup/addr 802904
+  000870  082ac240  wait_flag M->S (reg8)
+  000874  bcff0040  branch.f -68 words
+  000878  1530000a  poll_event evt=21 bank=A
+  00087c  38002040  branch.t +56 words
+  000880  1630000a  poll_event evt=22 bank=A
+  000884  b6ff2040  branch.t -74 words
+  000888  1730000a  poll_event evt=23 bank=A
+  00088c  02002040  branch.t +2 words
+  000890  b5ff0040  branch.f -75 words
+  000894  80290402  poll_setup/addr 802904
+  000898  0802c240  wait_flag S->S (reg8)
+  00089c  b2ff0040  branch.f -78 words
+  0008a0  2030000a  poll_event evt=32 bank=A
+  0008a4  31002040  branch.t +49 words
+  0008a8  2130000a  poll_event evt=33 bank=A
+  0008ac  32002040  branch.t +50 words
+  0008b0  2230000a  poll_event evt=34 bank=A
+  0008b4  02002040  branch.t +2 words
+  0008b8  abff0040  branch.f -85 words
+  0008bc  0028e040  vaddr_mode 0028
+  0008c0  a9ff0040  branch.f -87 words
+  0008c4  e4852048  frame_enter e48520 (DWARF 归因: 序言)
+  0008c8  45802048  frame_enter 458020 (DWARF 归因: 序言)
+  0008cc  a6ff0040  branch.f -90 words
+  0008d0  80290402  poll_setup/addr 802904
+  0008d4  0806c240  wait_flag V->S (reg8)
+  0008d8  a3ff0040  branch.f -93 words
+  0008dc  1830000a  poll_event evt=24 bank=A
+  0008e0  2b002040  branch.t +43 words
+  0008e4  1930000a  poll_event evt=25 bank=A
+  0008e8  02002040  branch.t +2 words
+  0008ec  9eff0040  branch.f -98 words
+  0008f0  80290402  poll_setup/addr 802904
+  0008f4  8802c240  wait_flag S->V (reg8)
+  0008f8  9bff0040  branch.f -101 words
+  0008fc  80290402  poll_setup/addr 802904
+  000900  0829c240  wait_flag M->M (reg8)
+  000904  98ff0040  branch.f -104 words
+  000908  80290402  poll_setup/addr 802904
+  00090c  0816c240  wait_flag MTE3->S (reg8)
+  000910  95ff0040  branch.f -107 words
+  000914  80290402  poll_setup/addr 802904
+  000918  0828c240  wait_flag M->S (reg8)
+  00091c  92ff0040  branch.f -110 words
+  000920  80290402  poll_setup/addr 802904
+  000924  0808c240  wait_flag M->S (reg8)
+  000928  8fff0040  branch.f -113 words
+  00092c  80290402  poll_setup/addr 802904
+  000930  8814c240  wait_flag MTE3->V (reg8)
+  000934  8cff0040  branch.f -116 words
+  000938  80290402  poll_setup/addr 802904
+  00093c  8806c240  wait_flag V->V (reg8)
+  000940  89ff0040  branch.f -119 words
+  000944  80290402  poll_setup/addr 802904
+  000948  0814c240  wait_flag MTE3->S (reg8)
+  00094c  86ff0040  branch.f -122 words
+  000950  80290402  poll_setup/addr 802904
+  000954  0851c240  wait_flag MTE2->M (reg8)
+  000958  83ff0040  branch.f -125 words
+  00095c  80290402  poll_setup/addr 802904
+  000960  8800c240  wait_flag S->V (reg8)
+  000964  80ff0040  branch.f -128 words
+  000968  80290402  poll_setup/addr 802904
+  00096c  084dc240  wait_flag MTE1->M (reg8)
+  000970  7dff0040  branch.f -131 words
+  000974  80290402  poll_setup/addr 802904
+  000978  8829c240  wait_flag M->MTE1 (reg8)
+  00097c  7aff0040  branch.f -134 words
+  000980  80290402  poll_setup/addr 802904
+  000984  8810c240  wait_flag MTE2->V (reg8)
+  000988  77ff0040  branch.f -137 words
+  00098c  80290402  poll_setup/addr 802904
+  000990  0810c240  wait_flag MTE2->S (reg8)
+  000994  74ff0040  branch.f -140 words
+  000998  0018e040  vaddr_mode 0018
+  00099c  00802207  cfg07 tag=0x22 imm16=32768
+  0009a0  10006307  cfg07 tag=0x63 imm16=16
+  0009a4  20051e07  cfg07 tag=0x1e imm16=1312
+  0009a8  f01fe103  addr_setup f01fe1
+  0009ac  80281c02  poll_setup/addr 80281c
+  0009b0  8ae7dc00  scalar00 op=dc 8ae7
+  0009b4  0b07e100  scalar00 op=e1 0b07
+  0009b8  00001e07  cfg_init tag=0x1e (配置槽初始化/清除)
+  0009bc  f01fe104  addr_setup f01fe1
+  0009c0  e01fe103  addr_setup e01fe1
+  0009c4  1ff71c00  scalar00 op=1c 1ff7
+  0009c8  8f072100  scalar00 op=21 8f07
+  0009cc  0ae8dc00  scalar00 op=dc 0ae8
+  0009d0  00e91602  poll_setup/addr 00e916
+  0009d4  02002040  branch.t +2 words
+  0009d8  0f000040  branch.f +15 words
+  0009dc  00802207  cfg07 tag=0x22 imm16=32768
+  0009e0  85fd2007  cfg07 tag=0x20 imm16=64901
+  0009e4  10006307  cfg07 tag=0x63 imm16=16
+  0009e8  80181c02  poll_setup/addr 80181c
+  0009ec  ffff6107  cfg07 tag=0x61 imm16=65535
+  0009f0  ffffa107  cfg07 tag=0xa1 imm16=65535
+  0009f4  e81fdd04  addr_setup e81fdd
+  0009f8  ff3fe107  cfg07 tag=0xe1 imm16=16383
+  0009fc  80081c02  poll_setup/addr 80081c
+  000a00  0202e002  frame_regsave slot=16 (帧寄存器存取)
+  000a04  01e81c00  scalar00 op=1c 01e8
+  000a08  10002007  cfg07 tag=0x20 imm16=16
+  000a0c  01e81c00  scalar00 op=1c 01e8
+  000a10  e01fdd04  addr_setup e01fdd
+  000a14  00001e07  cfg_init tag=0x1e (配置槽初始化/清除)
+  000a18  00004041  frame_exit 000040 (DWARF 归因: 尾声)
+  000a1c  00f02e40  path_exit (执行路径收尾, DWARF 归因: 函数尾声 ABI)
+  000a20  00006041  frame_exit 000060 (DWARF 归因: 尾声)

@@ -1,0 +1,23 @@
+# 构建产物
+build/
+build_artifacts/
+*.so
+*.o
+*.out
+*.log
+
+# 反汇编产物(可用 irev/msdisasm.py 重新生成)
+irev/output/
+
+# 临时/备份文件
+*.bak
+*.tmp
+*.tmp.*
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# 其他
+check_cache

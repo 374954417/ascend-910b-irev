@@ -1,0 +1,88 @@
+#include "kernel_operator.h"
+using namespace AscendC;
+
+extern "C" __global__ __aicore__ void bench_vshr_16t_i(GM_ADDR x, GM_ADDR y, GM_ADDR z, GM_ADDR i, uint32_t repeat)
+{
+    constexpr int32_t ELEMS = 256;
+    constexpr int32_t SLOTS = 8;
+    TPipe pipe;
+    TBuf<TPosition::VECCALC> xBuf, yBuf, zBuf;
+    pipe.InitBuffer(xBuf, ELEMS * sizeof(int16_t));
+    pipe.InitBuffer(yBuf, ELEMS * sizeof(int16_t));
+    pipe.InitBuffer(zBuf, SLOTS * ELEMS * sizeof(int16_t));
+    LocalTensor<int16_t> xL = xBuf.Get<int16_t>();
+    LocalTensor<int16_t> yL = yBuf.Get<int16_t>();
+    LocalTensor<int16_t> zL = zBuf.Get<int16_t>();
+    
+    GlobalTensor<int16_t> xGm, yGm;
+    GlobalTensor<int16_t> zGm;
+    xGm.SetGlobalBuffer((__gm__ int16_t *)x, ELEMS);
+    yGm.SetGlobalBuffer((__gm__ int16_t *)y, ELEMS);
+    zGm.SetGlobalBuffer((__gm__ int16_t *)z, SLOTS * ELEMS);
+    DataCopy(xL, xGm, ELEMS);
+    DataCopy(yL, yGm, ELEMS);
+    uint64_t mk[4] = {0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFF, 0, 0};
+    TEventID e = pipe.FetchEventID(HardEvent::MTE2_V);
+    SetFlag<HardEvent::MTE2_V>(e); WaitFlag<HardEvent::MTE2_V>(e);
+    int64_t cyc0 = GetSystemCycle();
+    for (uint32_t r = 0; r < repeat; r++) {
+
+        #pragma unroll
+        for (int32_t u = 0; u < SLOTS; u++) {
+            ShiftRight(zL[u * ELEMS], xL, (int16_t)1, ELEMS);
+        }
+    }
+    int64_t cyc1 = GetSystemCycle();
+    TEventID e2 = pipe.FetchEventID(HardEvent::V_MTE3);
+    SetFlag<HardEvent::V_MTE3>(e2); WaitFlag<HardEvent::V_MTE3>(e2);
+    DataCopy(zGm, zL, SLOTS * ELEMS);
+    // 把周期数写到 i 参数的位置(host 读回)
+    GlobalTensor<int64_t> cycGm;
+    cycGm.SetGlobalBuffer((__gm__ int64_t *)i, 2);
+    TEventID e3 = pipe.FetchEventID(HardEvent::V_MTE3);
+    SetFlag<HardEvent::V_MTE3>(e3); WaitFlag<HardEvent::V_MTE3>(e3);
+    SetAtomicAdd<int64_t>();
+    cycGm.SetValue(0, cyc1 - cyc0);
+    SetAtomicNone();
+}
+
+extern "C" __global__ __aicore__ void bench_vshr_16t_d(GM_ADDR x, GM_ADDR y, GM_ADDR z, GM_ADDR i, uint32_t repeat)
+{
+    constexpr int32_t ELEMS = 256;
+    constexpr int32_t SLOTS = 8;
+    TPipe pipe;
+    TBuf<TPosition::VECCALC> xBuf, yBuf, zBuf;
+    pipe.InitBuffer(xBuf, ELEMS * sizeof(int16_t));
+    pipe.InitBuffer(yBuf, ELEMS * sizeof(int16_t));
+    pipe.InitBuffer(zBuf, SLOTS * ELEMS * sizeof(int16_t));
+    LocalTensor<int16_t> xL = xBuf.Get<int16_t>();
+    LocalTensor<int16_t> yL = yBuf.Get<int16_t>();
+    LocalTensor<int16_t> zL = zBuf.Get<int16_t>();
+    
+    GlobalTensor<int16_t> xGm, yGm;
+    GlobalTensor<int16_t> zGm;
+    xGm.SetGlobalBuffer((__gm__ int16_t *)x, ELEMS);
+    yGm.SetGlobalBuffer((__gm__ int16_t *)y, ELEMS);
+    zGm.SetGlobalBuffer((__gm__ int16_t *)z, SLOTS * ELEMS);
+    DataCopy(xL, xGm, ELEMS);
+    DataCopy(yL, yGm, ELEMS);
+    uint64_t mk[4] = {0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFF, 0, 0};
+    TEventID e = pipe.FetchEventID(HardEvent::MTE2_V);
+    SetFlag<HardEvent::MTE2_V>(e); WaitFlag<HardEvent::MTE2_V>(e);
+    int64_t cyc0 = GetSystemCycle();
+    for (uint32_t r = 0; r < repeat; r++) {
+        ShiftRight(zL, zL, (int16_t)1, ELEMS);
+    }
+    int64_t cyc1 = GetSystemCycle();
+    TEventID e2 = pipe.FetchEventID(HardEvent::V_MTE3);
+    SetFlag<HardEvent::V_MTE3>(e2); WaitFlag<HardEvent::V_MTE3>(e2);
+    DataCopy(zGm, zL, SLOTS * ELEMS);
+    // 把周期数写到 i 参数的位置(host 读回)
+    GlobalTensor<int64_t> cycGm;
+    cycGm.SetGlobalBuffer((__gm__ int64_t *)i, 2);
+    TEventID e3 = pipe.FetchEventID(HardEvent::V_MTE3);
+    SetFlag<HardEvent::V_MTE3>(e3); WaitFlag<HardEvent::V_MTE3>(e3);
+    SetAtomicAdd<int64_t>();
+    cycGm.SetValue(0, cyc1 - cyc0);
+    SetAtomicNone();
+}

@@ -1,0 +1,323 @@
+; msdisasm: /tmp/test_progs/test_cube.elf  (.text 1280B, 320 words)
+  000000  a07f3a07  cfg07 tag=0x3a imm16=32672
+  000004  10007b07  cfg07 tag=0x7b imm16=16
+  000008  80389e02  poll_setup/addr 80389e
+  00000c  81d73b00  scalar00 op=3b 81d7
+  000010  80081f02  poll_setup/addr 80081f
+  000014  ff7f2007  cfg07 tag=0x20 imm16=32767
+  000018  0af8de00  scalar00 op=de 0af8
+  00001c  00802207  cfg07 tag=0x22 imm16=32768
+  000020  84f83a00  scalar00 op=3a 84f8
+  000024  78d23d08  addr_setup 78d23d
+  000028  80480202  poll_setup/addr 804802
+  00002c  00000807  setup imm=0 (count 或地址,地址单位为 256B → 0B)
+  000030  1010c409  ld_arg_gm reg=1 sub=0 flag- slot=0xc4
+  000034  0010c603  addr_setup 0010c6
+  000038  80380202  poll_setup/addr 803802
+  00003c  c24c0202  poll_setup/addr c24c02
+  000040  00190602  poll_setup/addr 001906
+  000044  00000207  fixp.ndNum=0
+  000048  f0ff0810  stack_adj -16 (帧栈调整, DWARF 归因)
+  00004c  00192c02  poll_setup/addr 00192c
+  000050  00191a02  poll_setup/addr 00191a
+  000054  80ed8904  addr_setup 80ed89
+  000058  80e78908  addr_setup 80e789
+  00005c  58e78b08  addr_setup 58e78b
+  000060  00e7e50f  frame_setup 00e7e5
+  000064  00e8a50f  frame_setup 00e8a5
+  000068  80e9a50f  frame_setup 80e9a5
+  00006c  00eae50f  frame_setup 00eae5
+  000070  00efe10f  frame_setup 00efe1
+  000074  8140c209  ld_arg_gm reg=4 sub=0 flagf slot=0xc2
+  000078  e150c209  ld_arg_gm reg=5 sub=0 flagf slot=0xc2
+  00007c  8150c209  ld_arg_gm reg=5 sub=0 flagf slot=0xc2
+  000080  38e78908  addr_setup 38e789
+  000084  18e78b08  addr_setup 18e78b
+  000088  e140c209  ld_arg_gm reg=4 sub=0 flagf slot=0xc2
+  00008c  8140c209  ld_arg_gm reg=4 sub=0 flagf slot=0xc2
+  000090  e150c209  ld_arg_gm reg=5 sub=0 flagf slot=0xc2
+  000094  8150c209  ld_arg_gm reg=5 sub=0 flagf slot=0xc2
+  000098  f8e68908  addr_setup f8e689
+  00009c  d8e68b08  addr_setup d8e68b
+  0000a0  e140c209  ld_arg_gm reg=4 sub=0 flagf slot=0xc2
+  0000a4  8140c209  ld_arg_gm reg=4 sub=0 flagf slot=0xc2
+  0000a8  e150c209  ld_arg_gm reg=5 sub=0 flagf slot=0xc2
+  0000ac  8150c209  ld_arg_gm reg=5 sub=0 flagf slot=0xc2
+  0000b0  8013c802  frame_regsave slot=4 (帧寄存器存取)
+  0000b4  00000a07  movi imm16=0 (或 ld2d.startIndex ext)
+  0000b8  4044ca02  frame_regsave slot=5 (帧寄存器存取)
+  0000bc  80490802  poll_setup/addr 804908
+  0000c0  02ebb50f  frame_setup 02ebb5
+  0000c4  02ecb50f  frame_setup 02ecb5
+  0000c8  82ebb50f  frame_setup 82ebb5
+  0000cc  9009a240  set_flag M->MTE1 (reg16)
+  0000d0  8053c802  frame_regsave slot=4 (帧寄存器存取)
+  0000d4  4044ca02  frame_regsave slot=5 (帧寄存器存取)
+  0000d8  8053cc02  frame_regsave slot=6 (帧寄存器存取)
+  0000dc  80490802  poll_setup/addr 804908
+  0000e0  4064ca02  frame_regsave slot=5 (帧寄存器存取)
+  0000e4  9009a240  set_flag M->MTE1 (reg16)
+  0000e8  90e8cb04  addr_setup 90e8cb
+  0000ec  80690802  poll_setup/addr 806908
+  0000f0  90e78b08  addr_setup 90e78b
+  0000f4  8f024a02  poll_setup/addr 8f024a
+  0000f8  0f02ca02  frame_regsave slot=5 (帧寄存器存取)
+  0000fc  9009a240  set_flag M->MTE1 (reg16)
+  000100  00200807  setup imm=8192 (count 或地址,地址单位为 256B → 2097152B)
+  000104  00500a08  addr_setup 00500a
+  000108  88e78d08  addr_setup 88e78d
+  00010c  00eb250f  frame_setup 00eb25
+  000110  42eb650f  frame_setup 42eb65
+  000114  80eba50f  frame_setup 80eba5
+  000118  82eca50f  frame_setup 82eca5
+  00011c  44e98904  addr_setup 44e989
+  000120  00ed250f  frame_setup 00ed25
+  000124  42ed650f  frame_setup 42ed65
+  000128  80eda50f  frame_setup 80eda5
+  00012c  82eea50f  frame_setup 82eea5
+  000130  0050cc04  addr_setup 0050cc
+  000134  4ce98b03  addr_setup 4ce98b
+  000138  00400c07  cfg07 tag=0x0c imm16=16384
+  00013c  48e98904  addr_setup 48e989
+  000140  00ef250f  frame_setup 00ef25
+  000144  42ef650f  frame_setup 42ef65
+  000148  7ce98b04  addr_setup 7ce98b
+  00014c  82e0a70f  frame_setup 82e0a7
+  000150  01530e00  scalar00 op=0e 0153
+  000154  03001007  cfg07 tag=0x10 imm16=3
+  000158  60e98904  addr_setup 60e989
+  00015c  70e98904  addr_setup 70e989
+  000160  00000807  setup imm=0 (count 或地址,地址单位为 256B → 0B)
+  000164  02014907  cfg07 tag=0x49 imm16=258
+  000168  4ce98f04  addr_setup 4ce98f
+  00016c  84ed5104  addr_setup 84ed51
+  000170  80e98d04  addr_setup 80e98d
+  000174  10320260  ld2d.issue -> L0A cfgslot=2
+  000178  11220260  ld2d.issue -> L0B cfgslot=2
+  00017c  a8e8c503  addr_setup a8e8c5
+  ┌─ mad (cube mma, 12B) ──────────────────────────
+  │ 000180  10000807    m=16 l0a_sel=0x08
+  000184  00580608  addr_setup 005806
+  000188  8023c402  frame_regsave slot=2 (帧寄存器存取)
+  00018c  80290402  poll_setup/addr 802904
+  │ 000190  04204907    k=64 n=32 l0b_sel=0x49
+  000194  0811a240  set_flag MTE2->M (reg8)
+  000198  0811c240  wait_flag MTE2->M (reg8)
+  │ 00019c  10000407    m=16 l0a_sel=0x04
+  │ 0001a0  04204507    k=64 n=32 l0b_sel=0x45
+  │ 0001a4  8080c507    unitFlag=1 initC=1 l0c_sel=0xc5
+  0001a8  003a8602  poll_setup/addr 003a86
+  │ 0001ac  8000c907    unitFlag=1 initC=0 l0c_sel=0xc9
+  0001b0  8810caf0  opcfg fp16
+  0001b4  9010c6f0  opcfg fp16
+  0001b8  b8e8c503  addr_setup b8e8c5
+  0001bc  00020607  fixp.nSize=32
+  0001c0  10004707  movi_h imm16=16 (定数高位, 完整值=(imm16<<4)|低4位)
+  0001c4  8023c402  frame_regsave slot=2 (帧寄存器存取)
+  0001c8  80290402  poll_setup/addr 802904
+  0001cc  01008707  fixp.dstStride=1 (x32B)
+  └───────────────────────────────────────────────────
+  0001d0  0849a240  set_flag M->M (reg8)
+  0001d4  0849c240  wait_flag M->M (reg8)
+  0001d8  845100c2  fixp.copy L0C->GM (regsel=845100)
+  0001dc  85ed0103  addr_setup 85ed01
+  0001e0  40000448  frame_enter 400004 (DWARF 归因: 序言)
+  0001e4  05000040  branch.f +5 words
+  0001e8  00001e07  cfg_init tag=0x1e (配置槽初始化/清除)
+  0001ec  00004041  frame_exit 000040 (DWARF 归因: 尾声)
+  0001f0  00f02e40  path_exit (执行路径收尾, DWARF 归因: 函数尾声 ABI)
+  0001f4  00006041  frame_exit 000060 (DWARF 归因: 尾声)
+  0001f8  84ed0903  addr_setup 84ed09
+  0001fc  a1e0370f  frame_setup a1e037
+  000200  a0154048  frame_enter a01540 (DWARF 归因: 序言)
+  000204  00000207  fixp.ndNum=0
+  000208  a5e68108  addr_setup a5e681
+  00020c  00000407  imm16_setup val=0 (向量 count / 标量位型 / 拷贝参数,视消费者)
+  000210  0d000040  branch.f +13 words
+  000214  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000218  0c04c240  wait_flag V->S (reg12)
+  00021c  00004041  frame_exit 000040 (DWARF 归因: 尾声)
+  000220  01102e40  path_exit (执行路径收尾, DWARF 归因: 函数尾声 ABI)
+  000224  0200000f  frame_setup 020000
+  000228  84ed0903  addr_setup 84ed09
+  00022c  01200408  addr_setup 012004
+  000230  002a0602  poll_setup/addr 002a06
+  000234  004a0a02  poll_setup/addr 004a0a
+  000238  10000008  addr_setup 100000
+  00023c  4580294a  jumpcmp.lt-side (regs=45/80 mode=29, 目标寄存器间接)
+  000240  9d000040  branch.f +157 words
+  000244  00000603  addr_setup 000006
+  000248  ff30000a  poll_event evt=255 bank=A
+  00024c  f8ff2040  branch.t -8 words
+  000250  fd0f0a03  addr_setup fd0f0a
+  000254  c0fe4448  frame_enter c0fe44 (DWARF 归因: 序言)
+  000258  fe0f0803  addr_setup fe0f08
+  00025c  1540c00a  poll_event evt=21 bank=B
+  000260  10002040  branch.t +16 words
+  000264  4d004c48  frame_enter 4d004c (DWARF 归因: 序言)
+  000268  1e000040  branch.f +30 words
+  00026c  1140c00a  poll_event evt=17 bank=B
+  000270  02002040  branch.t +2 words
+  000274  2f000040  branch.f +47 words
+  000278  1340c00a  poll_event evt=19 bank=B
+  00027c  50002040  branch.t +80 words
+  000280  1240000a  poll_event evt=18 bank=A
+  000284  5d002040  branch.t +93 words
+  000288  1340000a  poll_event evt=19 bank=A
+  00028c  02002040  branch.t +2 words
+  000290  e5ff0040  branch.f -27 words
+  000294  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000298  0c16c240  wait_flag MTE3->S (reg12)
+  00029c  e2ff0040  branch.f -30 words
+  0002a0  1b40c00a  poll_event evt=27 bank=B
+  0002a4  02002040  branch.t +2 words
+  0002a8  16000040  branch.f +22 words
+  0002ac  1e40c00a  poll_event evt=30 bank=B
+  0002b0  02002040  branch.t +2 words
+  0002b4  27000040  branch.f +39 words
+  0002b8  2040c00a  poll_event evt=32 bank=B
+  0002bc  48002040  branch.t +72 words
+  0002c0  1f40000a  poll_event evt=31 bank=A
+  0002c4  50002040  branch.t +80 words
+  0002c8  2040000a  poll_event evt=32 bank=A
+  0002cc  02002040  branch.t +2 words
+  0002d0  d5ff0040  branch.f -43 words
+  0002d4  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0002d8  0c4dc240  wait_flag MTE1->M (reg12)
+  0002dc  d2ff0040  branch.f -46 words
+  0002e0  c2044c48  frame_enter c2044c (DWARF 归因: 序言)
+  0002e4  60094048  frame_enter 600940 (DWARF 归因: 序言)
+  0002e8  a1094048  frame_enter a10940 (DWARF 归因: 序言)
+  0002ec  42004048  frame_enter 420040 (DWARF 归因: 序言)
+  0002f0  cdff0040  branch.f -51 words
+  0002f4  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0002f8  0c0dc240  wait_flag MTE1->M (reg12)
+  0002fc  caff0040  branch.f -54 words
+  000300  1840c00a  poll_event evt=24 bank=B
+  000304  24002040  branch.t +36 words
+  000308  1640000a  poll_event evt=22 bank=A
+  00030c  c2ff2040  branch.t -62 words
+  000310  1740000a  poll_event evt=23 bank=A
+  000314  45002040  branch.t +69 words
+  000318  1840000a  poll_event evt=24 bank=A
+  00031c  02002040  branch.t +2 words
+  000320  c1ff0040  branch.f -63 words
+  000324  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000328  0c10c240  wait_flag MTE2->S (reg12)
+  00032c  bcff0040  branch.f -68 words
+  000330  2e084048  frame_enter 2e0840 (DWARF 归因: 序言)
+  000334  6f084048  frame_enter 6f0840 (DWARF 归因: 序言)
+  000338  1140000a  poll_event evt=17 bank=A
+  00033c  02002040  branch.t +2 words
+  000340  b9ff0040  branch.f -71 words
+  000344  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000348  0c49c240  wait_flag M->M (reg12)
+  00034c  b6ff0040  branch.f -74 words
+  000350  1c40000a  poll_event evt=28 bank=A
+  000354  3e002040  branch.t +62 words
+  000358  1d40000a  poll_event evt=29 bank=A
+  00035c  3f002040  branch.t +63 words
+  000360  1e40000a  poll_event evt=30 bank=A
+  000364  02002040  branch.t +2 words
+  000368  afff0040  branch.f -81 words
+  00036c  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000370  0c08c240  wait_flag M->S (reg12)
+  000374  acff0040  branch.f -84 words
+  000378  63074048  frame_enter 630740 (DWARF 归因: 序言)
+  00037c  ab074048  frame_enter ab0740 (DWARF 归因: 序言)
+  000380  4c004048  frame_enter 4c0040 (DWARF 归因: 序言)
+  000384  a8ff0040  branch.f -88 words
+  000388  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  00038c  8c0ec240  wait_flag MTE1->V (reg12)
+  000390  a5ff0040  branch.f -91 words
+  000394  1940000a  poll_event evt=25 bank=A
+  000398  39002040  branch.t +57 words
+  00039c  1a40000a  poll_event evt=26 bank=A
+  0003a0  3a002040  branch.t +58 words
+  0003a4  1b40000a  poll_event evt=27 bank=A
+  0003a8  02002040  branch.t +2 words
+  0003ac  9eff0040  branch.f -98 words
+  0003b0  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0003b4  0c51c240  wait_flag MTE2->M (reg12)
+  0003b8  9bff0040  branch.f -101 words
+  0003bc  1440000a  poll_event evt=20 bank=A
+  0003c0  37002040  branch.t +55 words
+  0003c4  1540000a  poll_event evt=21 bank=A
+  0003c8  02002040  branch.t +2 words
+  0003cc  96ff0040  branch.f -106 words
+  0003d0  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0003d4  8c00c240  wait_flag S->V (reg12)
+  0003d8  93ff0040  branch.f -109 words
+  0003dc  2140000a  poll_event evt=33 bank=A
+  0003e0  32002040  branch.t +50 words
+  0003e4  2240000a  poll_event evt=34 bank=A
+  0003e8  02002040  branch.t +2 words
+  0003ec  8eff0040  branch.f -114 words
+  0003f0  0028e040  vaddr_mode 0028
+  0003f4  8cff0040  branch.f -116 words
+  0003f8  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0003fc  0c29c240  wait_flag M->M (reg12)
+  000400  89ff0040  branch.f -119 words
+  000404  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000408  8c2ac240  wait_flag M->V (reg12)
+  00040c  86ff0040  branch.f -122 words
+  000410  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000414  8c11c240  wait_flag MTE2->MTE1 (reg12)
+  000418  83ff0040  branch.f -125 words
+  00041c  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000420  0c0ec240  wait_flag MTE1->S (reg12)
+  000424  80ff0040  branch.f -128 words
+  000428  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  00042c  0c02c240  wait_flag S->S (reg12)
+  000430  7dff0040  branch.f -131 words
+  000434  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000438  0c11c240  wait_flag MTE2->M (reg12)
+  00043c  7aff0040  branch.f -134 words
+  000440  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000444  0c0ac240  wait_flag M->S (reg12)
+  000448  77ff0040  branch.f -137 words
+  00044c  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000450  0c2ac240  wait_flag M->S (reg12)
+  000454  74ff0040  branch.f -140 words
+  000458  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  00045c  0c28c240  wait_flag M->S (reg12)
+  000460  71ff0040  branch.f -143 words
+  000464  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000468  8c09c240  wait_flag M->MTE1 (reg12)
+  00046c  6eff0040  branch.f -146 words
+  000470  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000474  8c15c240  wait_flag MTE3->MTE1 (reg12)
+  000478  6bff0040  branch.f -149 words
+  00047c  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  000480  8c02c240  wait_flag S->V (reg12)
+  000484  68ff0040  branch.f -152 words
+  000488  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  00048c  0c14c240  wait_flag MTE3->S (reg12)
+  000490  00004041  frame_exit 000040 (DWARF 归因: 尾声)
+  000494  02102e40  path_exit (执行路径收尾, DWARF 归因: 函数尾声 ABI)
+  000498  63ff0040  branch.f -157 words
+  00049c  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0004a0  8c12c240  wait_flag MTE2->V (reg12)
+  0004a4  60ff0040  branch.f -160 words
+  0004a8  80390602  poll_setup (wait_flag 配对, 帧不变量)
+  0004ac  8c29c240  wait_flag M->MTE1 (reg12)
+  0004b0  5dff0040  branch.f -163 words
+  0004b4  90e8c103  addr_setup 90e8c1
+  0004b8  00000207  fixp.ndNum=0
+  0004bc  01000407  imm16_setup val=1 (向量 count / 标量位型 / 拷贝参数,视消费者)
+  0004c0  000b0002  poll_setup/addr 000b00
+  0004c4  90e8c104  addr_setup 90e8c1
+  0004c8  90e8c103  addr_setup 90e8c1
+  0004cc  8409c240  wait_flag M->MTE1 (reg4)
+  0004d0  001b0002  poll_setup/addr 001b00
+  0004d4  8809c240  wait_flag M->MTE1 (reg8)
+  0004d8  90e8c104  addr_setup 90e8c1
+  0004dc  02000007  cfg07 tag=0x00 imm16=2
+  0004e0  8009c240  wait_flag M->MTE1 (reg0)
+  0004e4  0018e040  vaddr_mode 0018
+  0004e8  00004041  frame_exit 000040 (DWARF 归因: 尾声)
+  0004ec  00102e40  path_exit (执行路径收尾, DWARF 归因: 函数尾声 ABI)
+  0004f0  00001e07  cfg_init tag=0x1e (配置槽初始化/清除)
+  0004f4  00004041  frame_exit 000040 (DWARF 归因: 尾声)
+  0004f8  00f02e40  path_exit (执行路径收尾, DWARF 归因: 函数尾声 ABI)
+  0004fc  00006041  frame_exit 000060 (DWARF 归因: 尾声)
